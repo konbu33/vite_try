@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build_fbh": "tsc && vite build --base=/",
     "preview": "vite preview"
   },
   "dependencies": {
