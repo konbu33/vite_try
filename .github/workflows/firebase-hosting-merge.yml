@@ -14,7 +14,7 @@ jobs:
 
       - name: install asdf
         run: git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.9.0
-      - run: echo ". $HOME/.asdf/asdf.sh" >> ~/.bashrc
+             && echo ". $HOME/.asdf/asdf.sh" >> ~/.bashrc
 
       - name: install nodejs
         run: . $HOME/.asdf/asdf.sh
@@ -22,7 +22,8 @@ jobs:
              && asdf install nodejs 17.8.0
              && asdf global nodejs 17.8.0
 
-      - run: npm install
+      - name: npm run build
+        run: npm install
              && npm run build_fbh
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
