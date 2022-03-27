@@ -18,8 +18,7 @@ jobs:
       - run: echo ". $HOME/.asdf/asdf.sh" >> ~/.bashrc
 
       - name: install nodejs
-      - run: . $HOME/.asdf/asdf.sh ¥ 
-                && asdf plugin add nodejs
+      - run: . $HOME/.asdf/asdf.sh && asdf plugin add nodejs
 
       - run: npm run build_fbh
 
