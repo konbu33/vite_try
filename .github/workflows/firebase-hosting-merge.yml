@@ -23,7 +23,8 @@ jobs:
              && asdf install nodejs 17.8.0
              && asdf global nodejs 17.8.0
 
-      - run: npm run build_fbh
+      - run: npm install
+             && npm run build_fbh
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
